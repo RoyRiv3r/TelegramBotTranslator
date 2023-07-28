@@ -87,7 +87,7 @@ available_commands = [
 ]
 
 def translate_text(text, target_lang):
-    url = 'https://api-free.deepl.com/v2/translate'
+    url = 'https://api-free.deepl.com/v2/translate' #put pro api if you have premium api key
     headers = {'Authorization': f'DeepL-Auth-Key {DEEPL_API_KEY}'}
     data = {'text': text, 'target_lang': target_lang}
     response = requests.post(url, headers=headers, data=data)
