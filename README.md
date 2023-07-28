@@ -5,6 +5,7 @@ This Python script creates a Telegram bot that uses the Google Text-to-Speech (T
 
 Firstly, it sets up the essential variables and headers required for the HTTP requests to Google's TTS service and the DeepL translation API.
 python
+
 ```python
 import telebot
 import requests
@@ -14,9 +15,11 @@ import base64
 import io
 
 #Text-to-speech variables
-T2S_ENDPOINT = 'https://texttospeech.googleapis.com/v1beta1/text:synthesize?key='
-...
-
+T2S_APIKEY = 'Your text to speech google API Key if you want to'
+API_TOKEN = 'Your telegram API Key'
+DEEPL_API_KEY = 'Your DeepL API Key'
+TARGET_LANGUAGE = 'lang'  # Set your desired target language here
+OWNER_IDS = [] #Your telegram user IDs so noone can use it apart you or your friends
 headers = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:109.0) Gecko/20100101 Firefox/114.0",
     ...
